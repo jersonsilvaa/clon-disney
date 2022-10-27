@@ -2,56 +2,56 @@ import React from 'react'
 
 import styled from 'styled-components'
 
-import logo from '/images/logo.svg'
 import home from '/images/home-icon.svg'
-import search from '/images/search-icon.svg'
-import watchlist from '/images/watchlist-icon.svg'
-import originals from '/images/original-icon.svg'
-import movies from '/images/movie-icon.svg'
+import logo from '/images/logo.svg'
 import series from '/images/series-icon.svg'
+import search from '/images/search-icon.svg'
+import movies from '/images/movie-icon.svg'
+import originals from '/images/original-icon.svg'
+import watchlist from '/images/watchlist-icon.svg'
 
 const Header = () => {
   return <>
-    <Nav>
-      <Logo src={logo} />
-
-      <NavMenu>
-        <a>
-          <img src={home} alt='inicio' />
-          <span>INICIO</span>
-        </a>
-        <a>
-          <img src={search} alt='buscar' />
-          <span>BÚSQUEDA</span>
-        </a>
-        <a>
-          <img src={watchlist} alt='lista' />
-          <span>MI LISTA</span>
-        </a>
-        <a>
-          <img src={originals} alt='originales' />
-          <span>ORIGINALES</span>
-        </a>
-        <a>
-          <img src={movies} alt='peliculas' />
-          <span>PELÍCULAS</span>
-        </a>
-        <a>
-          <img src={series} alt='series' />
-          <span>SERIES</span>
-        </a>
-      </NavMenu>
-      <UserImg src='https://pps.whatsapp.net/v/t61.24694-24/291483763_3316118818675085_5448892912731441282_n.jpg?ccb=11-4&oh=01_AdRasaHMCMa9-wrRzvtPOkyp0JaxAQP5ZZCYOITEZadKIA&oe=6366F005' />
-    </Nav>
-  </>
+      <Nav>
+        <Logo src={logo} />
+        <NavMenu>
+          <a>
+            <img src={home} alt='inicio' />
+            <span>INICIO</span>
+          </a>
+          <a>
+            <img src={search} alt='buscar' />
+            <span>BÚSQUEDA</span>
+          </a>
+          <a>
+            <img src={watchlist} alt='lista' />
+            <span>MI LISTA</span>
+          </a>
+          <a>
+            <img src={originals} alt='originales' />
+            <span>ORIGINALES</span>
+          </a>
+          <a>
+            <img src={movies} alt='peliculas' />
+            <span>PELÍCULAS</span>
+          </a>
+          <a>
+            <img src={series} alt='series' />
+            <span>SERIES</span>
+          </a>
+        </NavMenu>
+        <UserImg src='https://pps.whatsapp.net/v/t61.24694-24/291483763_3316118818675085_5448892912731441282_n.jpg?ccb=11-4&oh=01_AdRasaHMCMa9-wrRzvtPOkyp0JaxAQP5ZZCYOITEZadKIA&oe=6366F005' />
+      </Nav>
+    </>
 }
 
 const Nav = styled.div`
   height: 78px;
-  background: #090b13;
-  display: flex;
-  align-items: center;
   padding: 0 36px;
+  display: flex;
+  background: #090b13;
+  overflow-x: hidden;
+  align-items: center;
 `
 
 const Logo = styled.img`
@@ -59,38 +59,38 @@ const Logo = styled.img`
 `
 
 const NavMenu = styled.div`
-  display: flex;
   flex: 1;
-  margin-left: 25px;
+  display: flex;
   align-items: center;
+  margin-left: 25px;
 
   a {
+    cursor: pointer;
+    padding: 0 12px;
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    cursor: pointer;
 
     img {
       height: 25px;
     }
 
     span {
+      position: relative;
       font-size: 15px;
       letter-spacing: 1.42px;
-      position: relative;
 
       &::after {
         left: 0;
         right: 0;
-        height: 2px;
         bottom: -6px;
+        height: 2px;
         opacity: 0;
         content: '';
         position: absolute;
-        background: #fff;
         transform: scaleX(0);
-        transform-origin: center left;
         transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+        background: #fff;
+        transform-origin: center left;
       }
     }
 
