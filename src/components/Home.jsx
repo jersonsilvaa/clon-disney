@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 import ImgSlider from './ImgSlider'
-// 3:20.30
+import Viewers from './Viewers'
 
 const Home = () => {
   return <>
     <Content>
       <ImgSlider />
+      <Viewers />
     </Content>
   </>
 }
